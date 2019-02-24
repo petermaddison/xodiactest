@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% if jekyll.environment == 'stage' %}
+	<meta name="robots" content="noindex" />
+{% endif %}
+
+	<title>{{ page.title }}</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cc-icons/1.2.1/css/cc-icons.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura:600|Roboto:400" />
+	<link rel="stylesheet" href="/css/xodiac.css" />
+</head>
+<body class="flex-container flex-dir-column">
+{% if jekyll.environment == 'stage' %}
+<div class="text-center">
+   	<a href="https://www.xodiac.ca">This is the development environment for the Xodiac website, visit the live website at http://www.xodiac.ca</a>
+</div>
+{% endif %}
+	{% include navigation.html %}
+
+	<div id="main" class="flex-child-grow">
+		{{ content }}
+	</div>
+
+	{% include footer.html %}
+
+	<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4403388.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+		$('.expand-container .expand-toggle').click(function() {
+			$(this).parent().toggleClass('expanded')
+		});
+	</script>
+</body>
+</html>

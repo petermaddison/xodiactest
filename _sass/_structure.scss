@@ -1,0 +1,60 @@
+section {
+   	padding: 2em 0em;
+}
+
+.bottom {
+	bottom: 0px;
+}
+
+.chapter {
+	padding: 0.5em 0em;
+}
+
+.hero {
+	position: relative;
+	
+	background: {
+		size: cover;
+		position: center;
+	}
+	
+	font: {
+		family: $title-font-stack;
+		size: 3em;
+	}
+
+	color: $color-background;
+	
+	min-height: 40vh;
+	padding-top: 30vh;
+	
+	.attribution {
+		font-size: xx-small;
+		font-family: $standard-font-stack;
+	    opacity: 0.7;
+		position: absolute;
+		bottom: 0.2em;
+		right: 0.5em;
+		
+		&:before {
+			font-family: cc-icons;
+			content: "cba ";
+		}
+		
+		&, a, a:hover, a:link {
+			color: $color-background;
+		}
+	}
+}
+
+.expand-container {
+	.expand-content {
+		display: none;
+	}
+	
+	&.expanded {
+		.expand-content {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+---
+layout: blog
+title: Musings
+menu: Blog
+index: site.posts
+---
+{% include post_list.html posts=paginator.posts %}
+
+{% if paginator.total_pages > 1 %}
+<ul class="pagination text-center" role="navigation" aria-label="Pagination">
+	{% if paginator.previous_page %}
+	<li class="pagination-previous"><a class="pagination-previous" href="{{ paginator.previous_page_path }}" aria-label="Previous page">Previous</a></li>
+	{% else %}
+	<li class="pagination-previous disabled">Previous</li>
+	{% endif %}
+	
+	{% for page in (1..paginator.total_pages) %}
+	{% if page == paginator.page %}
+	<li class="current">{{ page }}</li>
+	{% elsif page == 1 %}
+	<li><a href=".." aria-label="Page 1">{{	page }}</a>
+	{% else %}
+	<li><a href="{{ site.paginate_path | replace: ':num', page }}" aria-label="Page {{ page }}">{{ page }}</a></li>
+	{% endif %}
+	{% endfor %}
+	
+	{% if paginator.next_page %}
+	<li class="pagination-next"><a href="{{ paginator.next_page_path }}" aria-label="Next page">Next</a></li>
+	{% else %}
+	<li class="pagination-next disabled">Next</li>
+	{% endif %}
+</ul>
+{% endif %}

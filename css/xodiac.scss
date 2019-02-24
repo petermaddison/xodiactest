@@ -1,0 +1,26 @@
+---
+---
+@import "colors";
+
+@import "settings";
+
+@import "foundation-settings";
+@import "foundation";
+$xy-grid: false; // workaround for https://github.com/zurb/foundation-sites/issues/10742
+@include foundation-everything();
+
+@import "page";
+
+@import "background";
+@import "logo";
+@import "structure";
+@import "styles";
+@import "forms";
+@import "svg";
+@import "blog";
+@import "process";
+@import "clean-hero-slider";
+@import "motion-ui";
+
+@include motion-ui-transitions;
+@include motion-ui-animations;

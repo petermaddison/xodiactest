@@ -1,0 +1,133 @@
+$color-process: $color-primary-0;
+
+%clearfix {
+	&::after {
+		display: block;
+		width: 100%;
+		clear : both;
+		content: "";
+	}
+}
+
+.process {
+	@extend %clearfix;
+	
+	position: relative;
+	width: 90%;
+	margin: 30px auto;
+	padding: 0;
+
+	/* the process line itself */
+	&::before {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 3px;
+		content: "";
+		background : $color-process;
+	}
+
+	.process-step {
+		@extend %clearfix;
+
+		position: relative;
+		
+		.process-step-icon {
+			position: absolute;
+			top: 0;
+			width: 50px;
+			height: 50px;
+			margin-left: -23px;
+			overflow: hidden;
+			background : $color-process;
+			border-radius: 50%;
+			
+			i {
+				left : 14px;
+				position: relative;
+				top: 14px;
+				font-size: 1.5rem;
+				color: $color-background;
+			}
+
+		}
+
+		.process-step-content {
+			width: 90%;
+			float: right;
+			padding: 20px;			
+			background: transparent;				
+			
+			p {
+				margin-bottom: 0;
+				font-size: 16px;
+				line-height: 1.4;
+			}
+			
+			.expand-container {
+				.expand-toggle {
+					margin-top: 0.3rem;
+					
+					&::before, &::after {
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						font-size: .8rem;
+					}
+				}
+				
+				.expand-toggle::before {
+					margin-right: 1rem;
+					content: "\f103";
+				}
+
+				&.expanded  .expand-toggle::before {
+					content: "\f102";
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint (medium) {
+	.process {
+		width: 100%;
+		padding: 0 10px;
+
+		&::before {
+			left: 50%;
+		}
+		
+		.process-step {
+			.process-step-icon {
+				left: 50%;
+			}
+			
+			.process-step-content {
+				width: 45%;
+			}
+
+			&:nth-child(odd) {
+				.process-step-content {
+					float: none;
+					text-align: right;
+					
+					.expand-container {
+						.expand-toggle::before {
+							margin-right: 0;
+							content: "";
+						}
+						
+						.expand-toggle::after {
+							margin-left: 1rem;
+							content: "\f103";
+						}
+						
+						&.expanded .expand-toggle::after {
+							content: "\f102";
+						}
+					}
+				}
+			}
+		}
+	}
+}

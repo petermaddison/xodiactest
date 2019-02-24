@@ -1,0 +1,31 @@
+/*
+ * Settings configuring the foundation framework
+ */
+$foundation-palette: (
+  primary: $color-primary-0,
+  secondary: $color-secondary-1-0,
+  success: $color-primary-0,
+  warning: $color-secondary-2-0,
+  alert: $color-complement-0,
+) !default;
+
+$topbar-padding: 0;
+$topbar-background: inherit;
+$button-radius: 4px;
+
+$pagination-item-background-current: $color-primary-1;
+$pagination-item-background-hover: $color-primary-0;
+
+$blockquote-color: inherit;
+$blockquote-border: none;
+
+$header-styles: (
+  'medium': (
+    'h1': ('font-size': 28),
+    'h2': ('font-size': 24),
+    'h3': ('font-size': 20),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
+    'h6': ('font-size': 16)
+  )
+) !default;

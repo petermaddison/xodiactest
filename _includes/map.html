@@ -1,0 +1,23 @@
+<section id="xodiac-map" class="hero"></section>
+<script>
+	function initMap() {
+		var toronto = {
+			lat: 43.648541,
+			lng: -79.381785
+		};
+		var map = new google.maps.Map(document.getElementById("xodiac-map"), {
+			zoom: 13,
+			center: toronto,
+			streetViewControl: false
+		});
+		var marker = new google.maps.Marker({
+			position: toronto,
+			map: map,
+      icon: 'http://www.xodiac.ca/images/marker.png',
+      title: 'Xodiac Inc.'
+		});
+	}
+</script>
+<script async="async" defer="defer"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGor7T4h7GEanu9ml3uinF1fRZ2x3FHFc&amp;callback=initMap">
+</script>

@@ -1,0 +1,86 @@
+.blog {
+	.post {
+		margin-bottom: 1rem;
+		
+		& > a {
+			font-style: italic;		
+		}
+	
+		img {
+			margin-bottom: 1.5rem;
+		}
+	
+	 	img.resize {
+	 		max-width:10%;
+	 		max-height:10%;
+	 	}
+	
+	}
+
+ 	&.date, &.author {
+ 		font-size: 1rem;
+	}
+	
+	&.author {
+		font-style: italic;
+		&:before {
+			content: "by ";
+		}
+	}
+		
+	.date {
+ 		font-size: 0.8rem;
+		color: $dark-gray;
+	}
+	
+	.tags {
+		font-size: 0.8rem;
+		list-style-type: none;
+		margin-left: 0;
+	
+		& > li {
+			display: inline-block;
+			border: solid 1px $color-primary-1;
+			border-radius: 0.3rem;
+			padding: 0.1rem 0.5rem;
+			
+			&:hover {
+				border-color: $color-primary-0;
+				background: $color-primary-0;
+				
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+
+	.tag-cloud {
+		font-size: 0.8rem;
+		list-style-type: none;
+		margin-left: 0;
+
+		li {
+			display: inline-block;
+			
+			a {
+				padding: 0.1em 0.5em;
+
+				&.active {
+					background-color: $color-primary-1;
+					color: white;
+				}
+				
+				&:hover {
+					background-color: $color-primary-0;
+					color: white;
+				}				
+			}
+		}
+	}
+	
+	.pagination li a:hover {
+		color: white;
+	}
+}
+

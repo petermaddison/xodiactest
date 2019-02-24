@@ -1,0 +1,12 @@
+{% for post in include.posts %}
+<div class="chapter post">
+	<h1>
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	</h1>
+	<div class="date">{{ post.date | date: "%b %-d, %Y" }}</div>
+	{{ post.excerpt }}
+	
+	{% include post_tags.html tags=post.tags %}
+	<a href="{{ post.url }}"><i class="fab fa-readme" aria-hidden="true"></i> Read on...</a>
+</div>
+{% endfor %}

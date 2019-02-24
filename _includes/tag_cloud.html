@@ -1,0 +1,11 @@
+{% assign tags = site.tags | sort %}			
+<ul class="tag-cloud">
+	{% for tag in tags %}
+	{% assign sizeForPopularity = tag[1].size | times: 0.05 | plus: 0.8 | at_most: 2 %}
+	{% if page.tag == tag[0] %}
+		<li><a href="/tag/{{ tag[0] }}" class="active" style="font-size: {{ sizeForPopularity }}em">{{tag[0]}}</a></li>
+	{% else %}
+		<li><a href="/tag/{{ tag[0] }}" style="font-size: {{ sizeForPopularity }}em">{{tag[0]}}</a></li>
+	{% endif %}
+	{% endfor %}
+</ul>

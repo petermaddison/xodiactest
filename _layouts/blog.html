@@ -1,0 +1,39 @@
+---
+layout: site
+menu: Blog
+---
+<!-- Hero section -->
+
+<section class="hero full-height bg-mountains">
+	<div class="row column">
+		<div>{{ page.title }}</div>
+		{% if page.date %} 
+		<div class="blog date">{{ page.date | date: "%b %-d, %Y" }}</div>
+		{% endif %}
+		{% if page.author %} 
+		<div class="blog author">{{ page.author }}</div>
+		{% endif %}
+	</div>
+</section>
+
+<section class="blog">
+	<div class="row">
+		<div class="column small-12 medium-7 large-8">
+		
+			{{ content }}
+
+			{% include post_tags.html tags=page.tags %}
+
+		</div>
+		
+		<div class="column small-12 medium-5 large-4">
+			{% unless page.tag %}
+				<h1>Archive</h1>
+				{% include post_index.html posts=site.posts %}
+			{% endunless %}
+			
+			<h1>Tags</h1>
+			{% include tag_cloud.html %}			
+		</div>
+	</div>
+</section>

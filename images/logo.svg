@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="100mm"
+   height="100mm"
+   viewBox="-200 -200 400 400"
+   id="svg2"
+   version="1.1">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer2"
+     style="display:inline">
+    <path
+       style="fill:#009600;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 7.0710678,-148.49242 0,141.4213522 141.4213522,0 44.54221,-44.5422052 a 200,200 0 0 0 -51.61327,-89.808087 200,200 0 0 0 -89.860569,-51.56079 l -44.4897232,44.48973 z"
+       id="path4143" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4143"
+       id="use4150"
+       transform="matrix(0,1,-1,0,0,0)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4143"
+       id="use4152"
+       transform="scale(-1,-1)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4143"
+       id="use4154"
+       transform="matrix(0,-1,1,0,0,0)"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+h1, h2, h3, h4, h5, h6 {
+	color: $color-secondary-1-0;
+}
+
+.title-font {
+	font: {
+		family: $title-font-stack;
+		weight: bold;
+	}
+}
+
+.quote, blockquote {
+	&:before, &:after {
+		color: $color-primary-2;
+		font-weight: bold;
+	}
+	
+	&:before {
+		content: "\201C";
+	}
+	
+	&:after {
+		content: "\201D";
+	}
+	
+}
+
+.quote {
+	padding-right: 25%;
+}
+
+blockquote {
+	font-style: italic;
+
+	p:first-child {
+		display: inline;
+	}
+}
+
+.copyright {
+	font-size: x-small;
+	
+	&:before {
+		content: "\00A9 "; // Copyright character
+	}
+	
+	&:after {
+		content: " All rights reserved."
+	}
+}
+
+.button {
+	font-family: $standard-font-stack;
+}
+
+.info {
+	border: solid 1px $color-primary-1;
+	padding: 2em;
+	margin-bottom: 1em;
+}
+
+.portret {
+	border-radius: 50%;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 2em;
+	padding-top: 2em;
+}

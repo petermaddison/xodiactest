@@ -1,0 +1,7 @@
+{% if include.tags %}
+<ul class="tags">
+	{% for tag in include.tags %}
+	<li><a href="/tag/{{ tag }}">{{tag}}</a></li>
+	{% endfor %}
+</ul>
+{% endif %}

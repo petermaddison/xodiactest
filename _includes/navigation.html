@@ -1,0 +1,30 @@
+<nav> <!-- Need extra level to allow navigation bar background color to span entire screen width -->
+    <div class="title-bar" data-responsive-toggle="menu-bar" data-hide-for="medium">
+		<div class="title-bar-left">
+			<button class="logo" type="button" data-toggle="menu-bar"></button>
+			<span class="title-bar-title">{{ page.menu }}</span>
+		</div>
+		<div class="title-bar-right">
+			<button class="menu-icon" type="button" data-toggle="menu-bar"></button>
+		</div>
+    </div>
+	<div class="row top-bar" id="menu-bar">
+		<div class="top-bar-left show-for-medium">
+			{% if page.url == "/" %}
+				<span class="logo"></span>
+			{% else %}
+				<a href="/" class="logo"></a>
+			{% endif %}
+		</div>
+		<div class="top-bar-right">
+			<ul class="menu vertical medium-horizontal">
+				<li class="hide-for-medium {% if page.url == '/' %} active {% endif %}"><a href="/" title="Welcome to Xodiac">Home</a></li>
+				<li {% if page.menu == "Services" %} class="active" {% endif %}><a href="/services.html" title="Find out how we can help you">Services</a></li>
+				<li {% if page.menu == "Products" %} class="active" {% endif %}><a href="/products.html" title="Find out what we are building">Products</a></li>
+				<li {% if page.menu == "Our Team" %} class="active" {% endif %}><a href="/our-team.html" title="Get to know us">Our team</a></li>
+				<li {% if page.menu == "Blog" or layout.menu == "Blog" %} class="active" {% endif %}><a href="/blog" title="Things we are musing about">Blog</a></li>
+				<li {% if page.menu == "Contact" %} class="active" {% endif %}><a href="/contact.html" title="Get in touch">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
