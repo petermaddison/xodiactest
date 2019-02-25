@@ -13,12 +13,12 @@
 			{% if page.url == "/" %}
 				<span class="logo"></span>
 			{% else %}
-				<a href="xodiactest" class="logo"></a>
+				<a href="/xodiactest" class="logo"></a>
 			{% endif %}
 		</div>
 		<div class="top-bar-right">
 			<ul class="menu vertical medium-horizontal">
-				<li class="hide-for-medium {% if page.url == '/' %} active {% endif %}"><a href="/" title="Welcome to Xodiac">Home</a></li>
+				<li class="hide-for-medium {% if page.url == '/' %} active {% endif %}"><a href="xodiactest" title="Welcome to Xodiac">Home</a></li>
 				<li {% if page.menu == "Services" %} class="active" {% endif %}><a href="services.html" title="Find out how we can help you">Services</a></li>
 				<li {% if page.menu == "Products" %} class="active" {% endif %}><a href="products.html" title="Find out what we are building">Products</a></li>
 				<li {% if page.menu == "Our Team" %} class="active" {% endif %}><a href="our-team.html" title="Get to know us">Our team</a></li>
